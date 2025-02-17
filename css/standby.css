@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Bauhaus Std Demi";
+    src: url("/font/Bauhaus\ Std\ Demi.otf");
+}
+
+@font-face {
+    font-family: "Bauhaus Std Medium";
+    src: url("font/Bauhaus\ Std\ Medium.otf");
+}
+
+:root {
+    --primary-color: #FCFBF7;
+    --secondary-color: #353938;
+}
+
+/* ---------------------------------- */
+.beige-text{
+    color: #EFEBD8;
+    font-family: "Bauhaus Std Demi";
+}
+
+.btn-black {
+    background-color: var(--secondary-color);
+    width: 600px;
+    height: 150px;
+}
+
+.btn-black :nth-child(1) {
+    color: var(--primary-color);
+    font-family: "Bauhaus Std Demi";
+}
+
+.icon-orange {
+    height: 130px;
+    width: 130px;
+    background-color: #F78712;
+}
+
+.play{
+    top: 500px;
+}
+
+.white-text {
+    color: var(--primary-color);
+    font-family: "Bauhaus Std Demi";
+}
+
+.white-text-medium {
+    color: var(--primary-color);
+    font-family: "Bauhaus Std Medium";
+}
