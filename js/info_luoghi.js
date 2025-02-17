@@ -61,7 +61,7 @@ function searchmap(){
         {card: "Farfalla Ardilume", path:"/2_info/info_dettagliate-farfalla.html"},
         {card: "Edera Luminaria", path:"/2_info/info_dettagliate-edera.html"},
         {card: "Marghiole", path:"/2_info/info_dettagliate-marghiole.html"},
-        {card: "Cervo verde", path:"/2_info/info_dettagliate-cervo verde.html"},
+        {card: "Cervo verde", path:"/2_info/info_dettagliate-cervo-verde.html"},
         {card: "Nihil", path:"/2_info/info_dettagliate-nihil.html"}
     ];
     let searchit = document.getElementById("search-item");
@@ -96,7 +96,7 @@ var pages = [{card: "Grotte di Aurorite", path:"/2_info/info_dettagliate-grotte.
     {card: "Farfalla Ardilume", path:"/2_info/info_dettagliate-farfalla.html"},
     {card: "Edera Luminaria", path:"/2_info/info_dettagliate-edera.html"},
     {card: "Marghiole", path:"/2_info/info_dettagliate-marghiole.html"},
-    {card: "Cervo verde", path:"/2_info/info_dettagliate-cervo verde.html"},
+    {card: "Cervo verde", path:"/2_info/info_dettagliate-cervo-verde.html"},
     {card: "Nihil", path:"/2_info/info_dettagliate-nihil.html"}
 ];
 
