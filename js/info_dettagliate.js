@@ -10,12 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const link4 = document.getElementById('link4');
         const home = document.getElementById('home');
     
-        if (icon4 && link4) {
-            icon4.src = "/img/icon/icon_home/icona_info_dettagliate.svg";
-            link4.href = "/info_luoghi.html";
-            home.href = "/index.html"
-        }
-    
         const scripts = container.querySelectorAll('script');
         scripts.forEach(script => {
             const newScript = document.createElement('script');
