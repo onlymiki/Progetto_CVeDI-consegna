@@ -14,6 +14,28 @@
 }
 
 /* ---------------------------------- */
+.black-text {
+    color: var(--secondary-color);
+    font-family: "Bauhaus Std Demi";
+}
+
+.black-text-medium{
+    font-family: "Bauhaus Std Medium";
+    color: var(--secondary-color);
+}
+
+.btn-black-search-2{
+    background-color: var(--secondary-color);
+    width: 94px;
+    height: 37px;
+}
+
+.btn-work{
+    width: 150px;
+    height: 150px;
+    background-color: #F78712;
+}
+
 .beige-text{
     color: #EFEBD8;
     font-family: "Bauhaus Std Demi";
@@ -30,6 +52,12 @@
     font-family: "Bauhaus Std Demi";
 }
 
+.black-block{
+    width:1920px;
+    height: 1080px;
+    background-color: var(--secondary-color);
+}
+
 .icon-orange {
     height: 130px;
     width: 130px;
@@ -38,6 +66,16 @@
 
 .play{
     top: 500px;
+}
+
+.pop{
+    width: 497px;
+    height: 284px;
+    background-color: var(--primary-color);
+}
+
+.visibility{
+    visibility: hidden;
 }
 
 .white-text {
