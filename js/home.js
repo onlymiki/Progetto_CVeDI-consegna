@@ -49,10 +49,23 @@ function toggleBlackBlock() {
 accessibilitySection.addEventListener("click", toggleBlackBlock);
 
 // ---------- Per mostrare l'orario ----------
-const now = new Date()
-const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+const now = new Date();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
 
-document.getElementById("time").innerHTML = time;
+        function formatTime(value) {
+            if (value < 10) {
+                return "0" + value;
+            } else {
+                return value;
+            }
+        }
+
+        hour = formatTime(hour);
+        minute = formatTime(minute);
+//const time = now.toLocaleTimeString('en-US', HH_MM).replace(/AM|PM/,'');
+
+document.getElementById("time").innerHTML = String(hour) + ":" + String(minute);
 
 // ---------- Per SOS ----------
 const btnSOS = document.getElementById("orange3");
