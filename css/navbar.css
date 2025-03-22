@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Bauhaus Std Demi";
-    src: url("/font/Bauhaus\ Std\ Demi.otf");
+    src: url("../font/Bauhaus\ Std\ Demi.otf");
 }
 
 @font-face {
     font-family: "Bauhaus Std Medium";
-    src: url("font/Bauhaus\ Std\ Medium.otf");
+    src: url("../font/Bauhaus\ Std\ Medium.otf");
 }
 
 :root {
