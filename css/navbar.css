@@ -48,6 +48,12 @@ body{
     border-bottom-left-radius: 0 !important;
 }
 
+.btn-black-ok {
+    background-color: var(--secondary-color);
+    width: 94px;
+    height: 37px;
+}
+
 .btn-black-search-2{
     background-color: var(--secondary-color);
     width: 94px;
@@ -209,7 +215,7 @@ body{
     font-family: "Bauhaus Std Demi";
 }
 
-.white-text.medium {
+.white-text-medium {
     color: var(--primary-color);
     font-family: "Bauhaus Std Medium";
 }
