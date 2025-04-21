@@ -73,15 +73,22 @@ function toggleDisplay3() {
 function toggleAble(id) {
     const ableElement = document.getElementById(`able${id}`);
     const disableElement = document.getElementById(`disable${id}`);
+    const switchButton = document.getElementById(`switch${id}`);
 
-    if (ableElement && disableElement) {
+    if (ableElement && disableElement && switchButton) {
         ableElement.classList.toggle("hide");
         disableElement.classList.toggle("hide");
+
+        if (disableElement.classList.contains("hide")) {
+            switchButton.style.backgroundColor = "#F78712";
+        } else {
+            switchButton.style.backgroundColor = "#8FA693";
+        }
     }
 }
 
-function workInProgress() {
-    const pop = document.getElementById("pop");
+function workInProgressPop() {
+    const pop = document.getElementById("pop-up");
     pop.classList.toggle("d-none");
     //document.getElementById("black-box").classList.toggle("d-none");
 }

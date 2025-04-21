@@ -27,14 +27,28 @@ function toggleDisplay() {
     }
 }
 
+// ---------- Per aprire il pop-up work in progress ----------
+function workInProgress() {
+    const pop = document.getElementById("pop");
+    pop.classList.toggle("d-none");
+    toggleBlackBlock();
+}
+
 // ---------- Per bottone switch ----------
 function toggleAble(id) {
     const ableElement = document.getElementById(`able${id}`);
     const disableElement = document.getElementById(`disable${id}`);
+    const switchButton = document.getElementById(`switch${id}`);
 
-    if (ableElement && disableElement) {
+    if (ableElement && disableElement && switchButton) {
         ableElement.classList.toggle("hide");
         disableElement.classList.toggle("hide");
+
+        if (disableElement.classList.contains("hide")) {
+            switchButton.style.backgroundColor = "#F78712";
+        } else {
+            switchButton.style.backgroundColor = "#8FA693";
+        }
     }
 }
 

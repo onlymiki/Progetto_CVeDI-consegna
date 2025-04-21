@@ -56,7 +56,7 @@
                 </button>
 
                 <button id="language" type="button" class="btn btn-round-nav-3 bottom-0 end-0 position-absolute"
-                    onclick="workInProgress()">
+                    onclick="workInProgressPop()">
                     <img src="/img/icon/icon_home/icona_lingua.svg" class="img-fluid" alt="icona lingua">
                 </button>
             </div>
@@ -204,13 +204,13 @@
                 </div>
                 <div class="col-4 d-flex justify-content-end">
                     <span
-                        class="btn-black d-flex justify-content-center align-items-center form-check form-switch rounded-pill">
+                        class="btn-black d-flex justify-content-center align-items-center form-check form-switch rounded-top-pill rounded-end-pill">
                         <input id="switch1" class="form-check-input btn-switch" type="checkbox" checked
                             onclick="toggleAble(1)">
                         <span id="disable1"
-                            class="h5 me-5 pe-3 mt-2 position-absolute able white-text-medium">Attivo</span>
+                            class="h5 me-5 pe-3 mt-2 position-absolute able white-text-medium">Spento</span>
                         <span id="able1"
-                            class="h5 me-4 mt-2 position-absolute disable hide white-text-medium">Spento</span>
+                            class="h5 me-4 mt-2 position-absolute disable hide white-text-medium">Attivo</span>
                     </span>
                 </div>
             </div>
@@ -224,7 +224,7 @@
                     <p class="display-6 black-text-medium m-0">Dimensione del carattere</p>
                 </div>
                 <div class="col-4 d-flex justify-content-end">
-                    <span class="btn-black d-flex justify-content-center align-items-center rounded-pill">
+                    <span class="btn-black d-flex justify-content-center align-items-center rounded-top-pill rounded-end-pill">
                         <img src="/img/icon/icon_navbar/arrow.svg" alt="icon arrow">
                     </span>
                 </div>
@@ -239,13 +239,13 @@
                 </div>
                 <div class="col-4 d-flex justify-content-end">
                     <span
-                        class="btn-black d-flex justify-content-center align-items-center form-check form-switch rounded-pill">
+                        class="btn-black d-flex justify-content-center align-items-center form-check form-switch rounded-top-pill rounded-end-pill">
                         <input id="switch3" class="form-check-input btn-switch" type="checkbox" checked
                             onclick="toggleAble(3)">
                         <span id="disable3"
-                            class="h5 me-5 pe-3 mt-2 position-absolute able white-text-medium">Attivo</span>
+                            class="h5 me-5 pe-3 mt-2 position-absolute able white-text-medium">Spento</span>
                         <span id="able3"
-                            class="h5 me-4 mt-2 position-absolute disable hide white-text-medium">Spento</span>
+                            class="h5 me-4 mt-2 position-absolute disable hide white-text-medium">Attivo</span>
                     </span>
                 </div>
             </div>
@@ -260,13 +260,13 @@
                 </div>
                 <div class="col-4 d-flex justify-content-end">
                     <span
-                        class="btn-black d-flex justify-content-center align-items-center form-check form-switch rounded-pill">
+                        class="btn-black d-flex justify-content-center align-items-center form-check form-switch rounded-top-pill rounded-end-pill">
                         <input id="switch4" class="form-check-input btn-switch" type="checkbox" checked
                             onclick="toggleAble(4)">
                         <span id="disable4"
-                            class="h5 me-5 pe-3 mt-2 position-absolute able white-text-medium">Attivo</span>
+                            class="h5 me-5 pe-3 mt-2 position-absolute able white-text-medium">Spento</span>
                         <span id="able4"
-                            class="h5 me-4 mt-2 position-absolute disable hide white-text-medium">Spento</span>
+                            class="h5 me-4 mt-2 position-absolute disable hide white-text-medium">Attivo</span>
                     </span>
                 </div>
             </div>
@@ -279,7 +279,7 @@
                     <p class="display-6 black-text-medium m-0">Filtro blu</p>
                 </div>
                 <div class="col-4 d-flex justify-content-end">
-                    <span class="btn-black d-flex justify-content-center align-items-center rounded-pill">
+                    <span class="btn-black d-flex justify-content-center align-items-center rounded-top-pill rounded-end-pill">
                         <img src="/img/icon/icon_navbar/arrow.svg" alt="icon arrow">
                     </span>
                 </div>
@@ -295,13 +295,13 @@
                 </div>
                 <div class="col-4 d-flex justify-content-end">
                     <span
-                        class="btn-black d-flex justify-content-center align-items-center form-check form-switch rounded-pill">
+                        class="btn-black d-flex justify-content-center align-items-center form-check form-switch rounded-top-pill rounded-end-pill">
                         <input id="switch6" class="form-check-input btn-switch" type="checkbox" checked
                             onclick="toggleAble(6)">
                         <span id="disable6"
-                            class="h5 me-5 pe-3 mt-2 position-absolute able white-text-medium">Attivo</span>
+                            class="h5 me-5 pe-3 mt-2 position-absolute able white-text-medium">Spento</span>
                         <span id="able6"
-                            class="h5 me-4 mt-2 position-absolute disable hide white-text-medium">Spento</span>
+                            class="h5 me-4 mt-2 position-absolute disable hide white-text-medium">Attivo</span>
                     </span>
                 </div>
             </div>
@@ -329,7 +329,7 @@
     <div id="black-block" class="black-block hide opacity-50 position-absolute z-4"></div>
 
     <!-- Blocco work-in-progress -->
-    <div id="pop" 
+    <div id="pop-up" 
         class="z-5 d-none align-items-center d-flex gap-4 justify-content-center pop position-absolute rounded-5 start-50 top-50 translate-middle">
         <div class="align-items-center btn-work d-flex justify-content-center me-2 rounded-circle">
             <img src="img/icon/icon_work.svg" class="pt-4" alt="work in progress">
@@ -342,7 +342,6 @@
                 <span class="m-0 white-text-medium">Ricevuto</span>
             </button>
         </div>
-
     </div>
 
 

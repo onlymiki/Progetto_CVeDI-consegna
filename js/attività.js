@@ -5,13 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(html => {
             const container = document.getElementById("component");
             container.innerHTML = html;
-
-            const icon2 = document.getElementById("icon_2");
-            const link2 = document.getElementById("link2")
+            const icon2 = document.getElementById('icon_2');
+            const link2 = document.getElementById('link2');
             if (icon2 && link2) {
                 icon2.src = "/img/icon/icon_home/icona_info_dettagliate1.svg";
-                link2.href = "/2_info.html"
-                icon2.classList.add("h-100");
+                link2.href = "/2_info.html";
             }
 
             const scripts = container.querySelectorAll("script");
@@ -27,19 +25,20 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
         .catch(error => console.error("Errore nel caricamento del componente:", error));
+
 });
 var elms = document.getElementsByClassName('splide');
 
-        for (var i = 0; i < elms.length; i++) {
-            new Splide(elms[i], {
-                type: 'loop',
-                perPage: 4,
-                perMove: 2,
-                gap: 40,
-                pagination: false,
-                arrowPath: "M4.65574 0.836838C3.59068 -0.278946 1.86387 -0.278946 0.7988 0.836838C-0.266267 1.95262 -0.266267 3.76166 0.7988 4.87745L15.234 20L0.7988 35.1225C-0.266267 36.2383 -0.266267 38.0474 0.7988 39.1632C1.86387 40.2789 3.59068 40.2789 4.65574 39.1632L21.0194 22.0203C22.0844 20.9045 22.0844 19.0955 21.0194 17.9797L4.65574 0.836838Z"
-            }).mount();
-        }
+for (var i = 0; i < elms.length; i++) {
+    new Splide(elms[i], {
+        type: 'loop',
+        perPage: 4,
+        perMove: 2,
+        gap: 40,
+        pagination: false,
+        arrowPath: "M4.65574 0.836838C3.59068 -0.278946 1.86387 -0.278946 0.7988 0.836838C-0.266267 1.95262 -0.266267 3.76166 0.7988 4.87745L15.234 20L0.7988 35.1225C-0.266267 36.2383 -0.266267 38.0474 0.7988 39.1632C1.86387 40.2789 3.59068 40.2789 4.65574 39.1632L21.0194 22.0203C22.0844 20.9045 22.0844 19.0955 21.0194 17.9797L4.65574 0.836838Z"
+    }).mount();
+}
 // ---------- Per bottone arancione e filtro ----------
 orange1 = document.getElementById("orange1")
 orange2 = document.getElementById("orange2");
@@ -237,7 +236,7 @@ function showActivity(number) {
             n.value = "";
             s.value = "";
             imgQR.classList.toggle("visibility");
-        } 
+        }
 
     }
     else {
