@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // ---------- Checkbox ----------
 // Controlla se lo stato del checkbox è già memorizzato
 window.onload = function () {
-    const checkbox = document.getElementById("switch6");
+    const checkbox = document.getElementById("switch7");
     const isChecked = localStorage.getItem("checkboxState") === "true";
     checkbox.checked = isChecked;
 };
 
 // Salva lo stato del checkbox nel localStorage e reindirizza a Info luoghi
-document.getElementById("switch6").addEventListener("change", function () {
+document.getElementById("switch7").addEventListener("change", function () {
     localStorage.setItem("checkboxState", this.checked);
     window.location.href = "/2_info.html";
 });

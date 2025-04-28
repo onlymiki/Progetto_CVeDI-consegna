@@ -24,13 +24,13 @@
     font-family: "Bauhaus Std Demi";
 }
 
-.blurred-background{
+.blurred-background {
     width: 400px;
     height: 1080px;
     background: linear-gradient(to right, #353938, transparent);
 }
 
-body{
+body {
     background-color: #EEEBD8;
 }
 
@@ -52,7 +52,7 @@ body{
 }
 
 .btn-search-bar {
-    width: 94px; 
+    width: 94px;
     height: 37px;
     background-color: var(--secondary-color);
 }
@@ -64,16 +64,21 @@ body{
     font-family: "Bauhaus Std Medium";
     font-size: 20px;
 }
+
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>") !important;
+}
+
 /*---*/
 
 .hide {
     display: none;
 }
 
-input.form-check-input:checked {
-    background-color: #45734C !important;
-    border-color: #45734C !important;
-}
+/*input.form-check-input {
+    background-color: #45734C;
+    border-color: #45734C;
+}*/
 
 .search {
     top: 90px;
@@ -107,21 +112,25 @@ input.form-check-input:checked {
     background-color: #F3BB81;
     width: 407px;
 }
-.splide__arrow--prev{
-    left:445px  !important;
+
+.splide__arrow--prev {
+    left: 445px !important;
 }
-.splide__arrow--next{
-    right:265px  !important;
+
+.splide__arrow--next {
+    right: 265px !important;
 }
+
 .splide__arrow {
     background: none !important;
 }
 
 .btn-black-ok {
-        background-color: var(--secondary-color);
-        width: 94px;
-        height: 37px;
-    }
+    background-color: var(--secondary-color);
+    width: 94px;
+    height: 37px;
+}
+
 .btn-work {
     width: 150px;
     height: 150px;
@@ -133,19 +142,22 @@ input.form-check-input:checked {
     height: 284px;
     background-color: var(--primary-color);
 }
+
 .black-text-medium {
     font-family: "Bauhaus Std Medium";
     color: var(--secondary-color);
 }
+
 .search-result {
     height: 37px;
     width: 554px;
     background-color: var(--secondary-color);
-    border-color:var(--primary-color);
+    border-color: var(--primary-color);
     border-style: solid;
     border-width: 0.5px;
-    
+
 }
+
 /* .not-found{
     background-color: var(--primary-color);
     height: 24px;
