@@ -447,73 +447,18 @@ setInterval(aggiornaOrari, 900000);
 
 
 
-// Per gestire gli errori
+//Per gestire gli errori
 document.addEventListener("DOMContentLoaded", function () {
     const from = document.getElementById("from");
     const to = document.getElementById("to");
     const search = document.getElementById("search");
     const search2 = document.getElementById("search2");
-    const error1 = document.getElementById("error1");
-    const error2 = document.getElementById("error2");
-    const error3 = document.getElementById("error3");
+    
     const searchStation = document.getElementById("search-station");
-    search.disabled = true;
-
-    const elements = [
-        "Biblioteca di Alessandria", "Francoforte 137", "Foresta arcobaleno", "Fungoland",
-        "Stazione centrale Z1", "Stazione 3", "Base spaziale", "Parco Safari GreenCherry",
-        "Porto 4", "James Cook", "Porto 2",
-        "Cristoforo Colombo", "Ziggurat di Ur"
-    ];
-
-    function validateInputs() {
-        const fromValue = from.value.trim();
-        const toValue = to.value.trim();
-        const fromValid = elements.includes(fromValue);
-        const toValid = elements.includes(toValue);
-
-        search.disabled = !(fromValid && toValid);
-
-        error1.classList.toggle("visibility", fromValid);
-        error2.classList.toggle("visibility", toValid);
-    }
-
-    function validateInputs2() {
-        // Per ricerca stazione
-        const searchStationValue = searchStation.value.trim();
-        const stationValid = elements.includes(searchStationValue);
-
-        search2.disabled = !(stationValid);
-
-        error3.classList.toggle("visibility", stationValid);
-    }
-
-    function error() {
-        validateInputs();
-
-    }
-
-    function errorV2() {
-        validateInputs2();
-    }
-
-    from.addEventListener("input", validateInputs);
-    to.addEventListener("input", validateInputs);
-    search.addEventListener("click", error);
-    search2.addEventListener("click", errorV2);
+    var form1 = false;
+    var form2 = false;
 });
 
-// ---------- Passaggio ad transport itinerari ----------
-document.getElementById("search").addEventListener("click", function () {
-    //Salvare dati campo di input
-    const fromValue = document.getElementById("from").value;
-    const toValue = document.getElementById("to").value;
-
-    localStorage.setItem("fromValue", fromValue);
-    localStorage.setItem("toValue", toValue);
-
-    window.location.href = "/4_itinerari.html";
-});
 
 
 // ---------- Componente Navbar ----------
@@ -570,3 +515,144 @@ okay.addEventListener("click", function(){
 });
 */
 
+function searchdestination() {
+    document.getElementById("start-from").classList.remove("z-3");
+    document.getElementById("go-to").classList.remove("z-2");
+    if(form1 && form2){
+        const fromValue = document.getElementById("from").value;
+        const toValue = document.getElementById("to").value;
+    
+        localStorage.setItem("fromValue", fromValue);
+        localStorage.setItem("toValue", toValue);
+    
+        window.location.href = "/4_itinerari.html";
+    }
+    if(!form1){
+        document.getElementById("not-found1").classList.remove("d-none");
+    }
+    if(!form2){
+        document.getElementById("not-found2").classList.remove("d-none");
+        
+    }
+}
+
+
+
+
+function searchmap(){
+    document.getElementById("search-results").innerHTML="";
+    var pages = [{card: "Grotte di Aurorite", path:"/2_info/info_dettagliate-grotte.html"},
+        {card: "Tartanghina", path:"/2_info/info_dettagliate-tartanghina.html"},
+        {card: "Biblioteca di Alessandria", path:"/2_info/info_dettagliate-biblio.html"},
+        {card: "Ziggurat di Ur", path:"/2_info/info_dettagliate-ziggurat.html"},
+        {card: "Farfalla Ardilume", path:"/2_info/info_dettagliate-farfalla.html"},
+        {card: "Edera Luminaria", path:"/2_info/info_dettagliate-edera.html"},
+        {card: "Marghiole", path:"/2_info/info_dettagliate-marghiole.html"},
+        {card: "Cervo verde", path:"/2_info/info_dettagliate-cervo-verde.html"},
+        {card: "Nihil", path:"/2_info/info_dettagliate-nihil.html"}
+    ];
+    let searchit = document.getElementById("search-item");
+    
+    let keyword = searchit.value.toLowerCase();
+    console.log(keyword);
+    
+    for (let i=0; i<pages.length; i++) {
+
+            if(keyword.localeCompare(pages[i].card.toLowerCase()) == 0) {                    
+                 window.location.href = pages[i].path;
+                } 
+            }
+            console.log("non trovato");
+            
+            document.getElementById("not-found").classList.remove("d-none");
+        }
+
+function findfrom(str){
+    form1 = false;
+    document.getElementById("not-found1").classList.add("d-none");
+    document.getElementById("start-from").classList.add("z-3");
+    console.log("chiamata funzione");
+    
+    
+    let container = document.getElementById("search-results1");
+    container.innerHTML="";
+    const stopslist = [
+        "Biblioteca di Alessandria", "Francoforte 137", "Foresta arcobaleno", "Fungoland",
+        "Stazione centrale Z1", "Stazione 3", "Base spaziale", "Parco Safari GreenCherry",
+        "Porto 4", "James Cook", "Porto 2",
+        "Cristoforo Colombo", "Ziggurat di Ur"
+    ];
+    
+    for (let i=0; i<stopslist.length; i++) {
+        if (container.childElementCount < 3) {
+            
+        if (stopslist[i].toLowerCase().includes(str.toLowerCase())) {
+            
+            resultstop = document.createElement("div");
+            resultstop.classList.add("align-items-center", "d-flex", "search-result",  "rounded-start-pill", "rounded-bottom-pill", "white-text-medium");
+            resultstop.addEventListener("click", function(){document.getElementById("from").value = stopslist[i]; document.getElementById("search-results1").innerHTML=""; document.getElementById("from").classList.add("ps-2"); 
+                document.getElementById("start-from").classList.remove("z-3"); form1 = true;});
+            result = document.createElement("h5");
+            result.innerHTML = stopslist[i];
+            result.classList.add("mb-0", "ms-4");
+            resultstop.appendChild(result);
+            document.getElementById("search-results1").appendChild(resultstop);
+        }
+        if (stopslist[i].toLowerCase() === str.toLowerCase()){
+            document.getElementById("search-results1").innerHTML="";
+            document.getElementById("start-from").classList.remove("z-3");
+            form1 = true;
+        }
+        }
+        
+    }
+    if (str === ""){
+        document.getElementById("search-results1").innerHTML="";
+        document.getElementById("start-from").classList.remove("z-3");
+    }
+}
+
+function findto(str){
+    form2 =false;
+    document.getElementById("not-found2").classList.add("d-none");
+    document.getElementById("go-to").classList.add("z-2");
+    console.log("chiamata funzione");
+    
+    
+    
+    let container = document.getElementById("search-results2");
+    container.innerHTML="";
+    const stopslist = [
+        "Biblioteca di Alessandria", "Francoforte 137", "Foresta arcobaleno", "Fungoland",
+        "Stazione centrale Z1", "Stazione 3", "Base spaziale", "Parco Safari GreenCherry",
+        "Porto 4", "James Cook", "Porto 2",
+        "Cristoforo Colombo", "Ziggurat di Ur"
+    ];
+    
+    for (let i=0; i<stopslist.length; i++) {
+        if (container.childElementCount < 3) {
+            
+        if (stopslist[i].toLowerCase().includes(str.toLowerCase())) {
+            
+            resultstop = document.createElement("div");
+            resultstop.classList.add("align-items-center", "d-flex", "search-result",  "rounded-start-pill", "rounded-bottom-pill", "white-text-medium");
+            resultstop.addEventListener("click", function(){document.getElementById("to").value = stopslist[i]; document.getElementById("search-results2").innerHTML=""; document.getElementById("to").classList.add("ps-2"); document.getElementById("go-to").classList.remove("z-2"); form2 = true;});
+            result = document.createElement("h5");
+            result.innerHTML = stopslist[i];
+            result.classList.add("mb-0", "ms-4");
+            resultstop.appendChild(result);
+            document.getElementById("search-results2").appendChild(resultstop);
+        } 
+        if (stopslist[i].toLowerCase() === str.toLowerCase()){
+            form2 = true;
+            document.getElementById("search-results2").innerHTML="";
+            document.getElementById("go-to").classList.remove("z-2");
+        }
+        
+    }
+    if (str === ""){
+        document.getElementById("search-results2").innerHTML="";
+        document.getElementById("go-to").classList.remove("z-2");
+    }
+}
+}

@@ -75,12 +75,25 @@
     color: #C70039;
 }
 
+#form-space {
+    height: 170px;
+}
+
+#go-to {
+    top: 135px;
+}
+
 .hide{
     display: none !important;
 }
 
 .navbar {
     display: none;
+}
+
+.not-found{
+    height: 24px;
+    width: 554px;
 }
 
 .pop{
@@ -94,17 +107,32 @@
 }
 
 .search-bar{
-    width: 390px;
+    width: 350px;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     font-family: "Bauhaus Std Medium";
     height: 37px;
+    width: 370px;
 }
 
 .search-bar:focus{
     outline:none;
     border-color: #8FA693;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.search-result {
+    height: 37px;
+    width: 370px;
+    background-color: var(--secondary-color);
+    border-color:var(--primary-color);
+    border-style: solid;
+    border-width: 0.5px;
+    
+}
+
+#start-from {
+    top: 70px;
 }
 
 .section-center {

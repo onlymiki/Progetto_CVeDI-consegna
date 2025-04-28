@@ -297,28 +297,49 @@
             <div class="mt-4 rounded-5 section-green p-0 m-0">
                 <h1 id="station" class="display-3 mb-0 py-2 rounded-top-5 text-center white-text">Stazione 3</h1>
                 <img id="img-container" src="/img/map/map_default.png" class="object-fit-cover section-img rounded-bottom-5" alt="mappa">
-                <div id="section-map" class="align-items-center flex-column hide mt-5 section-map w-100">
+                <div id="section-map" class="position-relative align-items-center flex-column hide mt-5 section-map w-100">
                     <h4 class="black-text display-6">Itinerario</h4>
-                    <form class="d-flex flex-column">
+                    <form id="start-from" class="d-flex position-absolute">
                         <div class="align-items-center d-flex mb-1 mt-2">
-                            <label class="col-1">
+                            <div class="row"><div class="col-1">
                                 <span class="black-text-medium h5 m-0">Da:</span>
-                            </label>
-                            <input id="from" class="border-0 rounded-5 search-bar" type="text">
+                            </div>
+                            <div class="col-11">
+                            <input id="from" class="border-0 rounded-5 search-bar" type="text" onkeyup="findfrom(this.value)">
+                            
+                            <div class="row">
+                            <div id="not-found1" class="not-found ps-4 black-text-medium d-none ">*Voce non presente</div>
+                        <div id="search-results1">
+                            <!-- <a class="align-items-center d-flex text-decoration-none search-result rounded-start-pill rounded-bottom-pill white-text-medium" href="/2_info/info_dettagliate-grotte.html"><h5 class="mb-0 ms-4">Grotte di Aurorite</h5></a>
+                            <a class="align-items-center d-flex text-decoration-none search-result rounded-start-pill rounded-bottom-pill white-text-medium" href="/2_info/info_dettagliate-grotte.html"><h5 class="mb-0 ms-4">Grotte di Aurorite</h5></a> -->
                         </div>
-                        <p id="error1" class="black-text-medium error ms-5 mb-3 visibility w-100">Fermata non
-                            riconosciuta</p>
-                        <div class="align-items-center d-flex">
-                            <label class="col-1">
-                                <span class="black-text-medium h5 m-0">A:</span>
-                            </label>
-                            <input id="to" class="border-0 rounded-5 search-bar" type="text">
                         </div>
-                        <p id="error2" class="black-text-medium error ms-5 visibility w-100">Fermata non riconosciuta
-                        </p>
-                    </form>
+                    </div>
+                        </div>
+                        
+                    </div>
+                </form>
+                <form id="go-to" class="d-flex position-absolute">
+                    <div class="align-items-center d-flex mb-1 mt-2">
+                        <div class="row"><div class="col-1">
+                            <span class="black-text-medium h5 m-0">A:</span>
+                        </div>
+                        <div class="col-11">
+                        <input id="to" class="border-0 rounded-5 search-bar" type="text" onkeyup="findto(this.value)">
+                        
+                        <div class="row">
+                        <div id="not-found2" class="not-found ps-4 black-text-medium d-none">*Voce non presente</div>
+                    <div id="search-results2"> 
+                    </div>
+                    </div>
+                </div>
+                    </div>
+                    
+                </div>
+            </form>
+                    <div id="form-space"></div>
                     <div class="d-flex justify-content-center">
-                        <button onclick="error()" id="search" type="button"
+                        <button onclick="searchdestination()" id="search" type="button"
                             class="align-items-center border-0 btn-black-search d-flex rounded-bottom-pill rounded-end-pill justify-content-evenly">
                             <img src="/img/icon/icon_search.svg" class="img-fluid" alt="search icon">
                             <span class="h5 m-0 text-center white-text-medium">Cerca</span>
@@ -328,7 +349,7 @@
                     <h4 class="black-text display-6">Stazione</h4>
                     <form class="d-flex flex-column">
                         <div class="align-items-center d-flex mt-2">
-                            <input id="search-station" class="border-0 rounded-5 search-bar" type="text">
+                            <input id="search-station" class="border-0 rounded-5 search-bar" type="text" onclick="undo()">
                         </div>
                         <p id="error3" class="black-text-medium error ms-1 visibility w-100">Stazione non
                             riconosciuta</p>
