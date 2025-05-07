@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function updateImage() {
             if (index === 0) {
                 updateStops0();
-                station.innerHTML = "Lampugnano";
+                station.innerHTML = "Lamprugnano";
 
                 if (window.matchMedia("(max-width: 992px)").matches || window.matchMedia("(min-width: 2551px)").matches) {
                     imgContainer.src = "../img/map/Bus2.png";
@@ -539,33 +539,33 @@ function searchdestination() {
 
 
 
-function searchmap(){
-    document.getElementById("search-results").innerHTML="";
-    var pages = [{card: "Grotte di Aurorite", path:"/2_info/info_dettagliate-grotte.html"},
-        {card: "Tartanghina", path:"/2_info/info_dettagliate-tartanghina.html"},
-        {card: "Biblioteca di Alessandria", path:"/2_info/info_dettagliate-biblio.html"},
-        {card: "Ziggurat di Ur", path:"/2_info/info_dettagliate-ziggurat.html"},
-        {card: "Farfalla Ardilume", path:"/2_info/info_dettagliate-farfalla.html"},
-        {card: "Edera Luminaria", path:"/2_info/info_dettagliate-edera.html"},
-        {card: "Marghiole", path:"/2_info/info_dettagliate-marghiole.html"},
-        {card: "Cervo verde", path:"/2_info/info_dettagliate-cervo-verde.html"},
-        {card: "Nihil", path:"/2_info/info_dettagliate-nihil.html"}
-    ];
-    let searchit = document.getElementById("search-item");
+// function searchmap(){
+//     document.getElementById("search-results").innerHTML="";
+//     var pages = [{card: "Grotte di Aurorite", path:"/2_info/info_dettagliate-grotte.html"},
+//         {card: "Tartanghina", path:"/2_info/info_dettagliate-tartanghina.html"},
+//         {card: "Biblioteca di Alessandria", path:"/2_info/info_dettagliate-biblio.html"},
+//         {card: "Ziggurat di Ur", path:"/2_info/info_dettagliate-ziggurat.html"},
+//         {card: "Farfalla Ardilume", path:"/2_info/info_dettagliate-farfalla.html"},
+//         {card: "Edera Luminaria", path:"/2_info/info_dettagliate-edera.html"},
+//         {card: "Marghiole", path:"/2_info/info_dettagliate-marghiole.html"},
+//         {card: "Cervo verde", path:"/2_info/info_dettagliate-cervo-verde.html"},
+//         {card: "Nihil", path:"/2_info/info_dettagliate-nihil.html"}
+//     ];
+//     let searchit = document.getElementById("search-item");
     
-    let keyword = searchit.value.toLowerCase();
-    console.log(keyword);
+//     let keyword = searchit.value.toLowerCase();
+//     console.log(keyword);
     
-    for (let i=0; i<pages.length; i++) {
+//     for (let i=0; i<pages.length; i++) {
 
-            if(keyword.localeCompare(pages[i].card.toLowerCase()) == 0) {                    
-                 window.location.href = pages[i].path;
-                } 
-            }
-            console.log("non trovato");
+//             if(keyword.localeCompare(pages[i].card.toLowerCase()) == 0) {                    
+//                  window.location.href = pages[i].path;
+//                 } 
+//             }
+//             console.log("non trovato");
             
-            document.getElementById("not-found").classList.remove("d-none");
-        }
+//             document.getElementById("not-found").classList.remove("d-none");
+//         }
 
 function findfrom(str){
     form1 = false;
@@ -580,7 +580,7 @@ function findfrom(str){
         "Biblioteca di Alessandria", "Francoforte 137", "Foresta arcobaleno", "Fungoland",
         "Stazione centrale Z1", "Stazione 3", "Base spaziale", "Parco Safari GreenCherry",
         "Porto 4", "James Cook", "Porto 2",
-        "Cristoforo Colombo", "Ziggurat di Ur"
+        "Cristoforo Colombo", "Ziggurat di Ur", "Lamprugnano"
     ];
     
     for (let i=0; i<stopslist.length; i++) {
@@ -626,7 +626,7 @@ function findto(str){
         "Biblioteca di Alessandria", "Francoforte 137", "Foresta arcobaleno", "Fungoland",
         "Stazione centrale Z1", "Stazione 3", "Base spaziale", "Parco Safari GreenCherry",
         "Porto 4", "James Cook", "Porto 2",
-        "Cristoforo Colombo", "Ziggurat di Ur"
+        "Cristoforo Colombo", "Ziggurat di Ur", "Lamprugnano"
     ];
     
     for (let i=0; i<stopslist.length; i++) {

@@ -127,11 +127,11 @@
     background-color: #FCFBF7;
     overflow: hidden;
 }
-#cardmappa-iniziale{left: 0;}
-.card_mappa, #cardmappa-iniziale{
+#cardmap-start{left: 0;}
+.card_map, #cardmap-start{
     top: 800px;
 }
-.card_mappa{
+.card_map{
     left: -544px;
 }
 .card_animation{
@@ -173,7 +173,7 @@
     width: 172px;
     margin-left: 40px;
 }
-.cardmappa-unselected{
+.cardmap-unselected{
     display: none;
 }
 .card-news {

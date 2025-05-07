@@ -75,7 +75,7 @@ function addDomMarker(map) {
     }
 
     function hidecards() {
-        cardiniz = document.getElementById("cardmappa-iniziale").classList.add("d-none");
+        cardiniz = document.getElementById("cardmap-start").classList.add("d-none");
         cards = document.getElementsByClassName("card-infoluoghi");
         for (const item of cards) {
             item.classList.remove("card_animation");
