@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (icon2 && link2) {
                 icon2.src = "/img/icon/icon_home/icona_info_dettagliate1.svg";
                 link2.href = "/2_info.html";
+                icon2.classList.add("pt-2");
             }
 
             const scripts = container.querySelectorAll("script");
